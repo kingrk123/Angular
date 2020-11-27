@@ -1,0 +1,17 @@
+.box {
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    width:300px;
+    border:2px solid darkcyan;
+    box-shadow: 2px 2px 3px darkcyan;
+    padding: 10px;
+    margin-top: 20px;
+    }
+    .group {
+    margin-bottom: 20px;
+    }
+    button {
+    background-color: darkcyan;
+    color:white;
+    }

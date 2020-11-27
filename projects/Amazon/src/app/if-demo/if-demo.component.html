@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h2>Product Details</h2>
+    <div class="row">
+        <div class="col-3">
+            <dl>
+                <dt>Name</dt>
+                <dd>{{product.Name}}</dd>
+                <dt>Price</dt>
+                <dd>{{product.price}}</dd>
+            </dl>
+            <button (click)="TogglePreview()" class="btn btn-primary btn-sm"> {{btnText}} Preview
+            </button>
+    </div>
+    <div class="col-9">
+        <div *ngIf="showImage">
+            <img [src]="product.photo" width="200" height="200" class="img-thumbnail">
+        </div>
+    </div>
+</div>

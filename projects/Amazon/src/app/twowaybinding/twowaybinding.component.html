@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <h2 class="text-center text-primary">Register Product</h2>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Name</label>
+                        <div>
+                            <input type="text" class="form-control" [(ngModel)]="Name">
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                        <div>
+                            <input type="text" class="form-control" [(ngModel)]="Price" >
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label>Shipped To</label>
+                        <div>
+                            <select class="form-control" [(ngModel)]="ShippedTo">
+                                <option>Delhi</option>
+                                <option>Hyderabad</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <label>In Stock</label>
+                        <div>
+                            <input type="checkbox" [(ngModel)]="InStock"> Yes
+                        </div>
+                </div>
+                <div class="form-group">
+                    <button (click)="RegisterClick()" class="btn btn-primary btn-block">Register</button>
+                </div>
+            </div>
+            <div class="col-9">
+                <table class="table table-hover">
+                    <colgroup span="1" style="background-color: lightcyan; font-weight: bold;"></colgroup>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{product.Name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>{{product.Price}}</td>
+                        </tr>
+                        <tr>
+                            <td>Shippied To</td>
+                            <td>{{product.ShippedTo}}</td>
+                        </tr>
+                        <tr>
+                            <td>Stock</td>
+                            <td>{{(product.InStock==true)?"Available":"Out of Stock"}}</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+</div>
